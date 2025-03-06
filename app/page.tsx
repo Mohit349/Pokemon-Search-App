@@ -52,7 +52,11 @@ export default function Home() {
           </select>
         </div>
       </section>
-      {pokemonDetails?.length ? (
+      {loading && !fetchMoreLoading ? (
+        <div className="flex align-center justify-center min-h-screen">
+          Loading...
+        </div>
+      ) : pokemonDetails?.length ? (
         <section className="min-h-[91vh]">
           <div className="px-15 py-10 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {(!loading || (loading && fetchMoreLoading)) &&

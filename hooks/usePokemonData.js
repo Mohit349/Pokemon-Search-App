@@ -4,7 +4,7 @@ import { baseUrl } from "@/constants";
 import _ from "lodash";
 
 export const useData = () => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [fetchMoreLoading, setFetchMoreLoading] = useState(false);
   const [pokemons, setPokemons] = useState([]);
   const [pokemonDetails, setDetails] = useState([]);
